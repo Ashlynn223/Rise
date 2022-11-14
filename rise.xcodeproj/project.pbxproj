@@ -17,6 +17,9 @@
 		03F80EE929220BA60087E839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F80EBF29220BA50087E839 /* ContentView.swift */; };
 		03F80EEA29220BA60087E839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F80EC029220BA60087E839 /* Assets.xcassets */; };
 		03F80EEB29220BA60087E839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F80EC029220BA60087E839 /* Assets.xcassets */; };
+		03F80EFE2922145A0087E839 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F80EFD2922145A0087E839 /* ContentView-ViewModel.swift */; };
+		03F80EFF2922145A0087E839 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F80EFD2922145A0087E839 /* ContentView-ViewModel.swift */; };
+		03F80F01292217700087E839 /* oceanSunset.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 03F80F00292217700087E839 /* oceanSunset.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		03F80EDE29220BA60087E839 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F80EE229220BA60087E839 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		03F80EE429220BA60087E839 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		03F80EFD2922145A0087E839 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		03F80F00292217700087E839 /* oceanSunset.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = oceanSunset.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 		03F80EB829220BA50087E839 = {
 			isa = PBXGroup;
 			children = (
+				03F80F00292217700087E839 /* oceanSunset.mp4 */,
 				03F80EBD29220BA50087E839 /* Shared */,
 				03F80ECC29220BA60087E839 /* macOS */,
 				03F80ED529220BA60087E839 /* Tests iOS */,
@@ -100,6 +106,7 @@
 				03F80EBE29220BA50087E839 /* riseApp.swift */,
 				03F80EBF29220BA50087E839 /* ContentView.swift */,
 				03F80EC029220BA60087E839 /* Assets.xcassets */,
+				03F80EFD2922145A0087E839 /* ContentView-ViewModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F80EEA29220BA60087E839 /* Assets.xcassets in Resources */,
+				03F80F01292217700087E839 /* oceanSunset.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F80EE829220BA60087E839 /* ContentView.swift in Sources */,
+				03F80EFE2922145A0087E839 /* ContentView-ViewModel.swift in Sources */,
 				03F80EE629220BA60087E839 /* riseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F80EE929220BA60087E839 /* ContentView.swift in Sources */,
+				03F80EFF2922145A0087E839 /* ContentView-ViewModel.swift in Sources */,
 				03F80EE729220BA60087E839 /* riseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,16 +1,14 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Ashlynn on 11/13/22.
-//
-
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            Text("Hello, World!")
+                .padding()
+            VideoPlayer(player: AVPlayer(url: URL(string: viewModel.url!)!))
+        }
     }
 }
 
