@@ -7,7 +7,7 @@ struct ContentView: View {
         VStack {
             Text("Hello, World!")
                 .padding()
-            VideoPlayer(player: AVPlayer(url: URL(string: viewModel.url!)!))
+            VideoPlayer(player: AVPlayer(url: viewModel.videoUrl as URL))
         }
     }
 }
