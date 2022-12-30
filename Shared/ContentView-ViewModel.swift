@@ -1,13 +1,8 @@
 import Foundation
 
 extension ContentView {
-    @MainActor class ViewModel: ObservableObject {
-        private var path: String
-        @Published var videoUrl: NSURL
-        
-        init() {
-            path = Bundle.main.path(forResource: "oceanSunset", ofType: ".mp4")!
-            videoUrl = NSURL(fileURLWithPath: path)
-        }
+    class ViewModel: ObservableObject {
+        @Published var choosenTime: Date = Date()
+        @Published var timeRemaining = 100
     }
 }

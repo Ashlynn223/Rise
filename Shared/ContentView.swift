@@ -1,16 +1,28 @@
 import SwiftUI
 import AVKit
+import Foundation
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    @State private var currentDate = Date()
+    var currentDate = Date.now
+    let formatter = DateFormatter()
+//    @State private var timeRemaining = 100
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
-            Text("Hello, World!")
+            Text("Welcome to Rise!")
                 .padding()
-            DatePicker("", selection: $currentDate, displayedComponents: .hourAndMinute)
-            VideoPlayer(player: AVPlayer(url: viewModel.videoUrl as URL))
+            DatePicker("", selection: $viewModel.choosenTime, displayedComponents: .hourAndMinute)
+            Text("Chosen time: \(viewModel.choosenTime) Current Time: \(currentDate)")
+//            Text("Time Remaining: \(timeRemaining)")
+            VideoPlayerView()
         }
+        
+//        .onReceive(timer) { time in
+//            if timeRemaining > 0 {
+//                timeRemaining -= 1
+//            }
+//        }
     }
 }
 
