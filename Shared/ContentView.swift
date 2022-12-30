@@ -4,10 +4,10 @@ import Foundation
 
 struct ContentView: View {
     @StateObject private var viewModel = ViewModel()
-    var currentDate = Date.now
+    @State var currentDate = Date.now
     let formatter = DateFormatter()
 //    @State private var timeRemaining = 100
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             Text("Welcome to Rise!")
@@ -15,14 +15,18 @@ struct ContentView: View {
             DatePicker("", selection: $viewModel.choosenTime, displayedComponents: .hourAndMinute)
             Text("Chosen time: \(viewModel.choosenTime) Current Time: \(currentDate)")
 //            Text("Time Remaining: \(timeRemaining)")
+            //timeRemaining = currentTime === viewModel.choosenTime show something
             VideoPlayerView()
+        }.onReceive(timer) { time in
+            currentDate = Date.now
+            if(formatter.string(from: currentDate) == "2022-12-30 07:45:12 +0000") {
+                print("🔔💥🔔💥🔔💥🔔💥🔔💥🔔💥")
+            } else {
+                print("...")
+                print("currentDate", currentDate)
+                print("choosenTime", viewModel.choosenTime)
+            }
         }
-        
-//        .onReceive(timer) { time in
-//            if timeRemaining > 0 {
-//                timeRemaining -= 1
-//            }
-//        }
     }
 }
 
