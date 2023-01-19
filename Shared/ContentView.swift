@@ -19,7 +19,7 @@ struct ContentView: View {
             VideoPlayerView()
         }.onReceive(timer) { time in
             currentDate = Date.now
-            if(formatter.string(from: currentDate) == "2022-12-30 07:45:12 +0000") {
+            if Calendar.current.isDate(currentDate, equalTo: viewModel.choosenTime, toGranularity: .second) {
                 print("🔔💥🔔💥🔔💥🔔💥🔔💥🔔💥")
             } else {
                 print("...")
